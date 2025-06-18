@@ -102,7 +102,8 @@ from .views import (
     get_manual_entries_for_inspector,
     get_manual_saler_assigned_slots,
     mark_multiple_notifications_as_read,
-    mark_notification_as_read
+    mark_notification_as_read,
+    get_cars_data
 
 
 )
@@ -111,6 +112,7 @@ urlpatterns = [
 
     path("authentecation/", is_authentecated),  # check authentecation
     path("logout/", logout, name="logout"),
+    path("get_cars_data/",get_cars_data,name="get_cars_data"), #json of all cars
 
     path(
         "add_availability/", add_availability, name="add_availability"
